@@ -82,19 +82,24 @@ myAngularApp.controller('MyController', ['$scope', '$websocket',
 
     }]);
 ```
-To send data you can use the $emit method. It accepts a string (any string is ok) and anything you want to send to your server
+To send data you can use the $emit method. It accepts a string (any string is ok) 
+and anything you want to send to your server
+
 ```javascript
     ws.$emit('ping', 'hi listening websocket server');
     // send a message to the websocket server
 ```
+
 To catch data from server you can set a listener like this
 (you can change the name of the event at line 79 of ng-websocket.js).
+
 ```javascript
     ws.$on('$message', function(response){
         //Do anything with data;
     });
 ```
-To simulate data from server 
+To simulate data from server
+
 ```javascript
     var data = {
         level: 1,
@@ -111,6 +116,7 @@ To simulate data from server
     };
 ```
 To catch when session close
+
 ```javascript
     ws.$on('$close', function () {
         console.log('Connection closed.');
