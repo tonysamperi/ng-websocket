@@ -111,6 +111,7 @@ To simulate data from server
     };
 ```
 To catch when session close
+```javascript
     ws.$on('$close', function () {
         console.log('Connection closed.');
     });
