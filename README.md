@@ -98,7 +98,7 @@ To catch data from server you can set a listener like this
         //Do anything with data;
     });
 ```
-To simulate data from server
+Then, to simulate data from server
 
 ```javascript
     var data = {
@@ -114,6 +114,9 @@ To simulate data from server
             }]
         }
     };
+    
+    ws.$emit("$message",data);
+    
 ```
 To catch when session close
 
